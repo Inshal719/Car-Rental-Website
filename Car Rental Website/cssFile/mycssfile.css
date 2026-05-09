@@ -2,7 +2,6 @@
    DRIVENOW CAR RENTAL — MAIN STYLESHEET
    
 ========================================================= */
-
 /* =========================================================
    CSS VARIABLES (ROOT)
 ========================================================= */
@@ -1535,6 +1534,7 @@ table tbody tr:hover {
 .search-box button{
     padding: 10px 15px;
 }
+
 .booking-summary{
     margin-top: 40px;
 }

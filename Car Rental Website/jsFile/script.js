@@ -1,6 +1,7 @@
 // =========================================================
-// DRIVENOW CAR RENTAL — MAIN JAVASCRIPT
-// Assignment 1 | HTML + CSS + JavaScript
+// 
+//DRIVENOW CAR RENTAL — MAIN JAVASCRIPT
+// 
 // =========================================================
 
 

@@ -339,7 +339,28 @@ function renderStockTable() {
     });
 }
 
+function searchByPrice() {
 
+    let maxPrice = document.getElementById("priceSearch").value;
+
+    let tableRows = document.querySelectorAll("#stock-tbody tr");
+
+    tableRows.forEach(function(row) {
+
+        let priceText = row.cells[5].innerText;
+
+        let price = parseInt(priceText.replace(/[^0-9]/g, ""));
+
+        if(price <= maxPrice || maxPrice === "") {
+            row.style.display = "";
+        }
+        else {
+            row.style.display = "none";
+        }
+
+    });
+
+}
 
 // =========================================================
 // DASHBOARD — INSERT STOCK

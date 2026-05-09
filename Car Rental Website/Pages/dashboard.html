@@ -132,10 +132,22 @@
                         <h3>📋 View Stock — All Vehicles</h3>
                         <span class="panel-subtitle">Click Edit or Delete to manage a record</span>
                     </div>
-
                     <div class="panel-body">
 
-                        <div class="table-wrapper">
+                        <div class="search-box">
+
+                         <input type="number"
+                          id="priceSearch"
+                          placeholder="Search by Maximum Price">
+
+                         <button onclick="searchByPrice()" class="btn-success">
+                         Search Price
+                         </button>
+
+                        </div>
+
+    <div class="table-wrapper">
+                    
                             <table>
                                 <thead>
                                     <tr>

@@ -1522,3 +1522,15 @@ table tbody tr:hover {
 .btn-warning{
     margin-right: 6px;
 }
+.search-box{
+    margin-bottom: 20px;
+}
+
+.search-box input{
+    padding: 10px;
+    width: 220px;
+}
+
+.search-box button{
+    padding: 10px 15px;
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | DriveNow Car Rental</title>
+
+    <!-- EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../cssFile/mycssfile.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <nav class="navbar">
+
+        <a href="../index.html" class="navbar-brand">🚗 DriveNow</a>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-links" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html" class="active-link">Our Fleet</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+                <a href="signup.html">
+                    <button class="btn-nav">Sign Up</button>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Our Premium Fleet</h1>
+        <p>Explore luxury sedans, sports cars, and SUVs available for rental across Pakistan</p>
+    </header>
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+    <main class="page-wrapper">
+
+        <!-- SEARCH BY CATEGORY -->
+        <section>
+
+            <div class="section-title">
+                <h2>Search by Category</h2>
+                <p>Filter our fleet by vehicle type</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active-filter" data-filter="all" onclick="filterCars('all')">All Vehicles</button>
+                <button class="filter-btn" data-filter="sedan" onclick="filterCars('sedan')">Sedans</button>
+                <button class="filter-btn" data-filter="suv" onclick="filterCars('suv')">SUVs</button>
+                <button class="filter-btn" data-filter="sports" onclick="filterCars('sports')">Sports Cars</button>
+            </div>
+
+            <!-- SEARCH BY PRICE -->
+            <div class="search-bar-row">
+
+                <div class="form-group">
+                    <label for="price-range">Filter by Max Price per Day: <strong id="price-display">Rs. 20,000</strong></label>
+                    <input type="range" id="price-range" min="5000" max="20000" step="500" value="20000" oninput="filterByPrice()">
+                </div>
+
+                <button class="btn-primary" onclick="filterCars('all'); document.getElementById('price-range').value=20000; document.getElementById('price-display').textContent='Rs. 20,000';">
+                    Reset Filters
+                </button>
+
+            </div>
+
+            <!-- CAR CARDS -->
+            <div class="cards-grid">
+
+                <!-- CARD 1 -->
+                <article class="car-card" data-type="sedan" data-price="7500">
+                    <img src="../Sources/img1.jpg" alt="MD-42 Luxury Sedan">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">Sedan • 5 Seats</span>
+                        <h3>MD-42 Luxury Sedan</h3>
+                        <p>Executive sedan designed for business travel and daily luxury rides.</p>
+                        <span class="car-price-tag">Rs. 7,500 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="car-card" data-type="sports" data-price="9000">
+                    <img src="../Sources/img2.jpg" alt="Black Mustang">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">Sports • 4 Seats</span>
+                        <h3>Black Mustang</h3>
+                        <p>High-performance sports car built for thrill and speed on open roads.</p>
+                        <span class="car-price-tag">Rs. 9,000 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="car-card" data-type="suv" data-price="12000">
+                    <img src="../Sources/img3.jpg" alt="Mercedes G-Wagon">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">SUV • 5 Seats</span>
+                        <h3>Mercedes G-Wagon</h3>
+                        <p>Premium SUV built for families, tours, and long-distance luxury travel.</p>
+                        <span class="car-price-tag">Rs. 12,000 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="car-card" data-type="sports" data-price="9500">
+                    <img src="../Sources/img4.jpg" alt="Mustang GT">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">Sports • 4 Seats</span>
+                        <h3>Black Mustang GT</h3>
+                        <p>Upgraded GT model with enhanced power and automatic transmission.</p>
+                        <span class="car-price-tag">Rs. 9,500 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+                <!-- CARD 5 -->
+                <article class="car-card" data-type="suv" data-price="15000">
+                    <img src="../Sources/img5.jpg" alt="G-Wagon AMG">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">SUV • 5 Seats</span>
+                        <h3>Mercedes G-Wagon AMG</h3>
+                        <p>Top-of-the-line AMG variant for the ultimate luxury driving experience.</p>
+                        <span class="car-price-tag">Rs. 15,000 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+                <!-- CARD 6 -->
+                <article class="car-card" data-type="sedan" data-price="8000">
+                    <img src="../Sources/img6.jpg" alt="MD-42 Executive">
+                    <div class="car-card-body">
+                        <span class="car-card-badge">Sedan • 5 Seats</span>
+                        <h3>MD-42 Executive</h3>
+                        <p>Refined executive sedan with premium interiors for corporate travel.</p>
+                        <span class="car-price-tag">Rs. 8,000 / day</span>
+                        <a href="signup.html" class="btn-primary">Book This Car</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PRICING TABLE -->
+        <section>
+
+            <div class="section-title">
+                <h2>Pricing &amp; Availability</h2>
+                <p>Click on a row to auto-fill the booking form below</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Car Model</th>
+                            <th>Category</th>
+                            <th>Seats</th>
+                            <th>Transmission</th>
+                            <th>Price / Day</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MD-42 Luxury Sedan</td>
+                            <td>Sedan</td>
+                            <td>5</td>
+                            <td>Automatic</td>
+                            <td>Rs. 7,500</td>
+                            <td><span class="status-available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Black Mustang</td>
+                            <td>Sports</td>
+                            <td>4</td>
+                            <td>Manual</td>
+                            <td>Rs. 9,000</td>
+                            <td><span class="status-available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mercedes G-Wagon</td>
+                            <td>SUV</td>
+                            <td>5</td>
+                            <td>Automatic</td>
+                            <td>Rs. 12,000</td>
+                            <td><span class="status-available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Black Mustang GT</td>
+                            <td>Sports</td>
+                            <td>4</td>
+                            <td>Automatic</td>
+                            <td>Rs. 9,500</td>
+                            <td><span class="status-available">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mercedes G-Wagon AMG</td>
+                            <td>SUV</td>
+                            <td>5</td>
+                            <td>Automatic</td>
+                            <td>Rs. 15,000</td>
+                            <td><span class="status-booked">Booked</span></td>
+                        </tr>
+                        <tr>
+                            <td>MD-42 Executive</td>
+                            <td>Sedan</td>
+                            <td>5</td>
+                            <td>Automatic</td>
+                            <td>Rs. 8,000</td>
+                            <td><span class="status-booked">Booked</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- BOOKING FORM -->
+        <section>
+
+            <div class="section-title">
+                <h2>Book Your Vehicle</h2>
+                <p>Fill in the form below to confirm your reservation</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="form-wrapper booking-form-center">
+
+                <div class="alert-error" id="booking-error"></div>
+                <div class="alert-success" id="booking-success"></div>
+
+                <form onsubmit="return validateBookingForm()">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup">Pick-Up Location</label>
+                            <input type="text" id="pickup" placeholder="e.g. Islamabad Airport">
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoff">Drop-Off Location</label>
+                            <input type="text" id="dropoff" placeholder="e.g. Lahore City">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selected-car">Select Vehicle</label>
+                        <select id="selected-car">
+                            <option value="">-- Choose Your Vehicle --</option>
+                            <option value="MD-42 Luxury Sedan">MD-42 Luxury Sedan — Rs. 7,500/day</option>
+                            <option value="Black Mustang">Black Mustang — Rs. 9,000/day</option>
+                            <option value="Mercedes G-Wagon">Mercedes G-Wagon — Rs. 12,000/day</option>
+                            <option value="Black Mustang GT">Black Mustang GT — Rs. 9,500/day</option>
+                            <option value="Mercedes G-Wagon AMG">Mercedes G-Wagon AMG — Rs. 15,000/day</option>
+                            <option value="MD-42 Executive">MD-42 Executive — Rs. 8,000/day</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-date">Pick-Up Date</label>
+                            <input type="date" id="pickup-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="return-date">Return Date</label>
+                            <input type="date" id="return-date">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-full">Confirm Booking</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>🚗 DriveNow</h2>
+                <p>Premium car rental services with comfort, luxury, and affordable pricing across Pakistan.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="services.html">Our Fleet</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📧 support@drivenow.com</p>
+                <p>📞 0311-1234567</p>
+                <p>📍 Islamabad, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DriveNow Car Rental. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- EXTERNAL JS -->
+    <script src="../jsFile/script.js"></script>
+
+</body>
+
+</html>

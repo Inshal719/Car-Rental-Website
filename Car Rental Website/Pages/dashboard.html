@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | DriveNow Car Rental</title>
+
+    <!-- EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../cssFile/mycssfile.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <nav class="navbar">
+
+        <a href="../index.html" class="navbar-brand">🚗 DriveNow</a>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-links" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html">Our Fleet</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html" class="active-link">Dashboard</a></li>
+            <li>
+                <a href="signup.html">
+                    <button class="btn-nav">Sign Up</button>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Admin Dashboard</h1>
+        <p>Manage your vehicle stock — View, Insert, Update, and Delete car inventory</p>
+    </header>
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+    <main class="page-wrapper">
+
+        <div class="dashboard-layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="sidebar-logo">🚗 DriveNow Admin</div>
+
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="#view-stock" class="active-sidebar">
+                            <span class="nav-icon">📋</span> View Stock
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#insert-stock">
+                            <span class="nav-icon">➕</span> Insert Stock
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#update-panel">
+                            <span class="nav-icon">✏️</span> Update Stock
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#view-stock">
+                            <span class="nav-icon">🗑️</span> Delete Stock
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chart-section">
+                            <span class="nav-icon">📊</span> Statistics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html">
+                            <span class="nav-icon">🏠</span> Main Site
+                        </a>
+                    </li>
+                </ul>
+
+            </aside>
+
+            <!-- DASHBOARD MAIN -->
+            <div class="dashboard-main">
+
+                <!-- STATS OVERVIEW -->
+                <div class="dash-stats">
+
+                    <div class="dash-stat-card">
+                        <h3>Total Vehicles</h3>
+                        <div class="stat-value">6</div>
+                    </div>
+
+                    <div class="dash-stat-card">
+                        <h3>Available</h3>
+                        <div class="stat-value">4</div>
+                    </div>
+
+                    <div class="dash-stat-card">
+                        <h3>Booked</h3>
+                        <div class="stat-value">2</div>
+                    </div>
+
+                    <div class="dash-stat-card">
+                        <h3>Revenue Today</h3>
+                        <div class="stat-value">Rs.84k</div>
+                    </div>
+
+                </div>
+
+                <!-- ================================
+                     SECTION 1: VIEW STOCK
+                ================================ -->
+                <div class="dashboard-panel" id="view-stock">
+
+                    <div class="panel-header">
+                        <h3>📋 View Stock — All Vehicles</h3>
+                        <span class="panel-subtitle">Click Edit or Delete to manage a record</span>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:40px; max-width:60px;">#</th>
+                                        <th style="min-width:160px;">Model</th>
+                                        <th style="min-width:90px;">Category</th>
+                                        <th style="min-width:60px;">Seats</th>
+                                        <th style="min-width:110px;">Transmission</th>
+                                        <th style="min-width:100px;">Price/Day</th>
+                                        <th style="min-width:90px;">Status</th>
+                                        <th style="min-width:150px;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stock-tbody">
+                                    <!-- Rendered by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================
+                     SECTION 2: INSERT STOCK
+                ================================ -->
+                <div class="dashboard-panel" id="insert-stock">
+
+                    <div class="panel-header">
+                        <h3>➕ Insert Stock — Add New Vehicle</h3>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="alert-error" id="insert-error"></div>
+                        <div class="alert-success" id="insert-success"></div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="insert-model">Car Model Name</label>
+                                <input type="text" id="insert-model" placeholder="e.g. Toyota Camry 2024">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="insert-category">Category</label>
+                                <select id="insert-category">
+                                    <option value="">-- Select Category --</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="insert-seats">No. of Seats</label>
+                                <input type="number" id="insert-seats" placeholder="e.g. 5" min="2" max="9">
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="insert-trans">Transmission</label>
+                                <select id="insert-trans">
+                                    <option value="">-- Select --</option>
+                                    <option value="Automatic">Automatic</option>
+                                    <option value="Manual">Manual</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="insert-price">Price Per Day (Rs.)</label>
+                                <input type="number" id="insert-price" placeholder="e.g. 8500" min="1000">
+                            </div>
+
+                        </div>
+
+                        <button class="btn-success" onclick="insertStock()">➕ Add Vehicle to Fleet</button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================
+                     SECTION 3: UPDATE STOCK
+                ================================ -->
+                <div class="dashboard-panel panel-hidden" id="update-panel">
+
+                    <div class="panel-header">
+                        <h3>✏️ Update Stock — Edit Vehicle Details</h3>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="alert-error" id="update-error"></div>
+                        <div class="alert-success" id="update-success"></div>
+
+                        <input type="hidden" id="update-id">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="update-model">Car Model Name</label>
+                                <input type="text" id="update-model" placeholder="Car model name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update-cat">Category</label>
+                                <select id="update-cat">
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update-seats">Seats</label>
+                                <input type="number" id="update-seats" min="2" max="9">
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="update-trans">Transmission</label>
+                                <select id="update-trans">
+                                    <option value="Automatic">Automatic</option>
+                                    <option value="Manual">Manual</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update-price">Price Per Day (Rs.)</label>
+                                <input type="number" id="update-price" min="1000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="update-status">Status</label>
+                                <select id="update-status">
+                                    <option value="Available">Available</option>
+                                    <option value="Booked">Booked</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <button class="btn-warning" onclick="updateStock()">💾 Save Changes</button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================
+                     SECTION 4: CHART / STATISTICS
+                ================================ -->
+                <div class="chart-container" id="chart-section">
+
+                    <h3>📊 Fleet Statistics — Graphical Overview</h3>
+
+                    <div class="bar-chart" id="chart-bars">
+                        <!-- Rendered by JavaScript -->
+                    </div>
+
+                    <div class="chart-stats-table">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Value</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Total Sedans</td>
+                                        <td>42</td>
+                                        <td>Most popular category</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total SUVs</td>
+                                        <td>35</td>
+                                        <td>Family and tour use</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sports Cars</td>
+                                        <td>23</td>
+                                        <td>High demand weekends</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Currently Booked</td>
+                                        <td>18</td>
+                                        <td>Active rentals today</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Revenue (today)</td>
+                                        <td>Rs. 84,000</td>
+                                        <td>Across all categories</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>🚗 DriveNow</h2>
+                <p>Admin dashboard for managing car rental inventory and fleet operations.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="services.html">Our Fleet</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📧 support@drivenow.com</p>
+                <p>📞 0311-1234567</p>
+                <p>📍 Islamabad, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DriveNow Car Rental. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- EXTERNAL JS -->
+    <script src="../jsFile/script.js"></script>
+
+</body>
+
+</html>

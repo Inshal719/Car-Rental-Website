@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | DriveNow Car Rental</title>
+
+    <!-- EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../cssFile/mycssfile.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <nav class="navbar">
+
+        <a href="../index.html" class="navbar-brand">🚗 DriveNow</a>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-links" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html">Our Fleet</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+                <a href="signup.html">
+                    <button class="btn-nav">Sign Up</button>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Create Your Account</h1>
+        <p>Register today and enjoy premium car rentals and exclusive member benefits</p>
+    </header>
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+    <main class="page-wrapper">
+
+        <div class="auth-layout">
+
+            <!-- SIDE IMAGE -->
+            <div class="auth-image-col">
+                <img src="../Sources/img10.jpg" alt="Luxury Car Rental Service">
+            </div>
+
+            <!-- SIGNUP FORM -->
+            <div class="auth-form-col">
+
+                <div class="form-wrapper">
+
+                    <div class="form-header">
+                        <h2>Create Account</h2>
+                        <p>Join DriveNow and start booking premium vehicles instantly</p>
+                    </div>
+
+                    <div class="alert-error" id="signup-error"></div>
+
+                    <form onsubmit="return validateSignupForm()">
+
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-phone">Phone Number</label>
+                            <input type="tel" id="signup-phone" placeholder="e.g. 0311-1234567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a strong password (min 6 characters)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-confirm">Confirm Password</label>
+                            <input type="password" id="signup-confirm" placeholder="Re-enter your password">
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms-check">
+                            <label for="terms-check">
+                                I agree to the DriveNow Terms &amp; Conditions, Privacy Policy, and Rental Agreement.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-full">Create My Account</button>
+
+                    </form>
+
+                    <div class="form-footer-note">
+                        Already have an account? <a href="login.html">Login Here</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>🚗 DriveNow</h2>
+                <p>Trusted premium car rental service offering comfort, luxury, and affordability.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="services.html">Our Fleet</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📧 support@drivenow.com</p>
+                <p>📞 0311-1234567</p>
+                <p>📍 Islamabad, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DriveNow Car Rental. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- EXTERNAL JS -->
+    <script src="../jsFile/script.js"></script>
+
+</body>
+
+</html>

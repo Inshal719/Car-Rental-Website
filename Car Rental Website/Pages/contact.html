@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DriveNow Car Rental</title>
+
+    <!-- EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="../cssFile/mycssfile.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <nav class="navbar">
+
+        <a href="../index.html" class="navbar-brand">🚗 DriveNow</a>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="navbar-links" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html">Our Fleet</a></li>
+            <li><a href="contact.html" class="active-link">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+                <a href="signup.html">
+                    <button class="btn-nav">Sign Up</button>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Contact DriveNow</h1>
+        <p>Our support team is ready to help you with bookings, pricing, and rental information</p>
+    </header>
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+    <main class="page-wrapper">
+
+        <div class="contact-layout">
+
+            <!-- CONTACT INFO -->
+            <aside class="contact-info-col">
+
+                <div class="contact-info-item">
+                    <span class="contact-info-icon">📍</span>
+                    <div>
+                        <h4>Office Address</h4>
+                        <p>Main Boulevard Road, Islamabad, Pakistan</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <span class="contact-info-icon">📞</span>
+                    <div>
+                        <h4>Phone Number</h4>
+                        <p>0311-1234567</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <span class="contact-info-icon">📧</span>
+                    <div>
+                        <h4>Email Address</h4>
+                        <p>support@drivenow.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <span class="contact-info-icon">🕐</span>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>Monday – Saturday: 9:00 AM – 8:00 PM</p>
+                    </div>
+                </div>
+
+                <img src="../Sources/img4.jpg" alt="DriveNow Office" class="contact-map-img">
+
+            </aside>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-col">
+
+                <div class="form-wrapper">
+
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill the form below and our team will respond within 24 hours</p>
+                    </div>
+
+                    <div class="alert-error" id="contact-error"></div>
+                    <div class="alert-success" id="contact-success"></div>
+
+                    <form onsubmit="return submitContactForm()">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name</label>
+                                <input type="text" id="contact-name" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" placeholder="e.g. Booking Inquiry, Pricing Question">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Your Message</label>
+                            <textarea id="contact-message" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-full">Send Message</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about DriveNow car rental services</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <span class="feature-icon">❓</span>
+                    <h3>How do I book a car?</h3>
+                    <p>Visit our Fleet page, choose your vehicle, fill the booking form and confirm. You'll receive a confirmation call within 1 hour.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">💳</span>
+                    <h3>What payment methods?</h3>
+                    <p>We accept cash, debit/credit card, and bank transfer. Payment is required at the time of pickup.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">🔄</span>
+                    <h3>What is the cancellation policy?</h3>
+                    <p>Free cancellation up to 24 hours before pickup. Late cancellations may incur a Rs. 500 fee.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="feature-icon">📋</span>
+                    <h3>Documents required?</h3>
+                    <p>A valid CNIC and driving license are required. International tourists need a valid passport and international driving permit.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>🚗 DriveNow</h2>
+                <p>Premium car rental service with affordable pricing, modern vehicles, and reliable customer support.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="services.html">Our Fleet</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📧 support@drivenow.com</p>
+                <p>📞 0311-1234567</p>
+                <p>📍 Islamabad, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 DriveNow Car Rental. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- EXTERNAL JS -->
+    <script src="../jsFile/script.js"></script>
+
+</body>
+
+</html>

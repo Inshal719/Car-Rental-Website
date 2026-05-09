@@ -331,7 +331,7 @@ function renderStockTable() {
             "<td>Rs. " + car.price.toLocaleString() + "</td>" +
             "<td><span class='" + statusClass + "'>" + car.status + "</span></td>" +
             "<td>" +
-                "<button class='btn-warning' onclick='loadUpdateForm(" + car.id + ")' style='margin-right:6px'>Edit</button>" +
+                "<button class='btn-warning' onclick='loadUpdateForm(" + car.id + ")'>Edit</button>" +
                 "<button class='btn-danger' onclick='deleteStock(" + car.id + ")'>Delete</button>" +
             "</td>";
 

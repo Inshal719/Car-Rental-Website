@@ -1,7 +1,6 @@
 /* =========================================================
    DRIVENOW CAR RENTAL — MAIN STYLESHEET
-   Assignment 1 | HTML + CSS Project
-   All styling centralized here (no inline CSS except table min/max-width)
+   
 ========================================================= */
 
 /* =========================================================
@@ -1519,4 +1518,7 @@ table tbody tr:hover {
 
 .chart-stats-table {
     margin-top: 20px;
+}
+.btn-warning{
+    margin-right: 6px;
 }

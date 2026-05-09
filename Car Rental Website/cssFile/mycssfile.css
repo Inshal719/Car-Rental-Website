@@ -1092,7 +1092,6 @@ table tbody tr:hover {
     color: var(--text-dark);
     line-height: 1;
 }
-
 /* =========================================================
    DASHBOARD SECTION PANELS
 ========================================================= */
@@ -1535,4 +1534,7 @@ table tbody tr:hover {
 
 .search-box button{
     padding: 10px 15px;
+}
+.booking-summary{
+    margin-top: 40px;
 }

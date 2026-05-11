@@ -3,19 +3,21 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveNow | Premium Car Rental Pakistan</title>
-    <meta name="description" content="DriveNow offers luxury, SUV, sports and executive car rentals across Pakistan at unbeatable rates.">
+    <meta charset="UTF-8" />
 
-    <!-- EXTERNAL CSS FILE -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>DriveNow Car Rental</title>
+
     <link rel="stylesheet" href="cssFile/mycssfile.css">
-
 </head>
 
 <body>
 
-    <!-- ==============================
+     <!-- ==============================
          NAVBAR
     ============================== -->
     <nav class="navbar">
@@ -41,34 +43,43 @@
             </li>
         </ul>
 
-    </nav>
-
-    <!-- ==============================
-         MAIN CONTENT
-    ============================== -->
-    <main class="page-wrapper">
+    </nav> 
 
         <!-- HERO SECTION -->
         <section class="hero-section">
 
             <div class="hero-text">
-                <h1>Rent Your <span>Dream Car</span> Today</h1>
+
+                <h1>
+                    Rent Your <span>Dream Car</span> Today
+                </h1>
+
                 <p>
                     Luxury sedans, sports cars, SUVs, and executive vehicles
                     available across Pakistan. Affordable rates, premium experience.
                 </p>
+
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="document.getElementById('fleet').scrollIntoView({behavior:'smooth'})">
+
+                    <button class="btn-primary">
                         Browse Fleet
                     </button>
-                    <button class="btn-outline" onclick="window.location.href='Pages/services.html'">
+
+                    <button class="btn-outline">
                         Book Now
                     </button>
+
                 </div>
+
             </div>
 
             <div class="hero-image-box">
-                <img id="hero-img" src="Sources/img1.jpg" alt="Luxury Rental Car">
+
+                <img
+                    src="sources/img1.jpg"
+                    alt="Luxury Rental Car"
+                />
+
             </div>
 
         </section>
@@ -102,55 +113,136 @@
         <section id="fleet">
 
             <div class="section-title">
+
                 <h2>Featured Cars</h2>
-                <p>Explore our most popular rental vehicles</p>
+
+                <p>
+                    Explore our most popular rental vehicles
+                </p>
+
                 <div class="title-line"></div>
+
             </div>
 
-            <!-- FILTER BAR -->
             <div class="filter-bar">
-                <button class="filter-btn active-filter" data-filter="all" onclick="filterCars('all')">All Cars</button>
-                <button class="filter-btn" data-filter="sedan" onclick="filterCars('sedan')">Sedans</button>
-                <button class="filter-btn" data-filter="suv" onclick="filterCars('suv')">SUVs</button>
-                <button class="filter-btn" data-filter="sports" onclick="filterCars('sports')">Sports</button>
+
+                <button class="filter-btn active-filter">
+                    All Cars
+                </button>
+
+                <button class="filter-btn">
+                    Sedans
+                </button>
+
+                <button class="filter-btn">
+                    SUVs
+                </button>
+
+                <button class="filter-btn">
+                    Sports
+                </button>
+
             </div>
 
             <div class="cards-grid">
 
                 <!-- CARD 1 -->
-                <article class="car-card" data-type="sedan" data-price="7500">
-                    <img src="Sources/img1.jpg" alt="MD-42 Luxury Sedan">
+                <article class="car-card">
+
+                    <img
+                        src="sources/img1.jpg"
+                        alt="MD-42 Luxury Sedan"
+                    />
+
                     <div class="car-card-body">
-                        <span class="car-card-badge">Sedan</span>
+
+                        <span class="car-card-badge">
+                            Sedan
+                        </span>
+
                         <h3>MD-42 Luxury Sedan</h3>
-                        <p>Executive sedan designed for comfort, business travel, and daily luxury.</p>
-                        <span class="car-price-tag">Rs. 7,500 / day</span>
-                        <a href="Pages/services.html" class="btn-primary">Book Now</a>
+
+                        <p>
+                            Executive sedan designed for comfort,
+                            business travel, and daily luxury.
+                        </p>
+
+                        <span class="car-price-tag">
+                            Rs. 7,500 / day
+                        </span>
+
+                        <a href="#" class="btn-primary">
+                            Book Now
+                        </a>
+
                     </div>
+
                 </article>
 
                 <!-- CARD 2 -->
-                <article class="car-card" data-type="sports" data-price="9000">
-                    <img src="Sources/img2.jpg" alt="Black Mustang">
+                <article class="car-card">
+
+                    <img
+                        src="sources/img2.jpg"
+                        alt="Black Mustang"
+                    />
+
                     <div class="car-card-body">
-                        <span class="car-card-badge">Sports</span>
+
+                        <span class="car-card-badge">
+                            Sports
+                        </span>
+
                         <h3>Black Mustang</h3>
-                        <p>High-performance sports car built for thrill, speed, and style.</p>
-                        <span class="car-price-tag">Rs. 9,000 / day</span>
-                        <a href="Pages/services.html" class="btn-primary">Book Now</a>
+
+                        <p>
+                            High-performance sports car built
+                            for thrill, speed, and style.
+                        </p>
+
+                        <span class="car-price-tag">
+                            Rs. 9,000 / day
+                        </span>
+
+                        <a href="#" class="btn-primary">
+                            Book Now
+                        </a>
+
                     </div>
+
                 </article>
 
                 <!-- CARD 3 -->
-                <article class="car-card" data-type="suv" data-price="12000">
-                    <img src="Sources/img3.jpg" alt="Mercedes G-Wagon">
+                <article class="car-card">
+
+                    <img
+                        src="sources/img3.jpg"
+                        alt="Mercedes G-Wagon"
+                    />
+
                     <div class="car-card-body">
-                        <span class="car-card-badge">SUV</span>
+
+                        <span class="car-card-badge">
+                            SUV
+                        </span>
+
                         <h3>Mercedes G-Wagon</h3>
-                        <p>Premium SUV perfect for families, tours, and luxury experiences.</p>
-                        <span class="car-price-tag">Rs. 12,000 / day</span>
-                        <a href="Pages/services.html" class="btn-primary">Book Now</a>
+
+                        <p>
+                            Premium SUV perfect for families,
+                            tours, and luxury experiences.
+                        </p>
+
+                        <span class="car-price-tag">
+                            Rs. 12,000 / day
+                        </span>
+
+                        <a href="#" class="btn-primary">
+                            Book Now
+                        </a>
+
                     </div>
+
                 </article>
 
             </div>
@@ -161,18 +253,26 @@
         <section class="gallery-section">
 
             <div class="section-title">
+
                 <h2>Our Luxury Collection</h2>
-                <p>A glimpse into our premium fleet</p>
+
+                <p>
+                    A glimpse into our premium fleet
+                </p>
+
                 <div class="title-line"></div>
+
             </div>
 
             <div class="gallery-grid">
-                <img src="Sources/img1.jpg" alt="Car Image 1">
-                <img src="Sources/img2.jpg" alt="Car Image 2">
-                <img src="Sources/img3.jpg" alt="Car Image 3">
-                <img src="Sources/img4.jpg" alt="Car Image 4">
-                <img src="Sources/img5.jpg" alt="Car Image 5">
-                <img src="Sources/img6.jpg" alt="Car Image 6">
+
+                <img src="sources/img1.jpg" alt="Car Image 1" />
+                <img src="sources/img2.jpg" alt="Car Image 2" />
+                <img src="sources/img3.jpg" alt="Car Image 3" />
+                <img src="Sources/img4.jpg" alt="Car Image 4" />
+                <img src="Sources/img5.jpg" alt="Car Image 5" />
+                <img src= "Sources/img6.jpg" alt="Car Image 6" />
+
             </div>
 
         </section>
@@ -181,21 +281,33 @@
         <div class="about-banner">
 
             <div class="about-text-box">
+
                 <h2>Why Choose DriveNow?</h2>
+
                 <p>
                     DriveNow is trusted by thousands of customers across Pakistan
                     for reliable, affordable, and luxury vehicle rentals.
                 </p>
+
                 <p>
                     Our fleet includes sedans, SUVs, sports cars, and executive
                     vehicles suitable for weddings, business trips, family travel,
                     and tourism across 12+ cities.
                 </p>
-                <a href="Pages/services.html" class="btn-primary">View Our Fleet</a>
+
+                <a href="#" class="btn-primary">
+                    View Our Fleet
+                </a>
+
             </div>
 
             <div class="about-image-box">
-                <img src="Sources/img4.jpg" alt="DriveNow Fleet">
+
+                <img
+                    src="Sources/img4.jpg"
+                    alt="DriveNow Fleet"
+                />
+
             </div>
 
         </div>
@@ -204,47 +316,95 @@
         <section>
 
             <div class="section-title">
+
                 <h2>Our Services</h2>
-                <p>More than just car rentals</p>
+
+                <p>
+                    More than just car rentals
+                </p>
+
                 <div class="title-line"></div>
+
             </div>
 
             <div class="features-grid">
 
                 <div class="feature-card">
+
                     <span class="feature-icon">📅</span>
+
                     <h3>Easy Online Booking</h3>
-                    <p>Reserve your vehicle in minutes with our hassle-free online booking system.</p>
+
+                    <p>
+                        Reserve your vehicle in minutes
+                        with our hassle-free booking system.
+                    </p>
+
                 </div>
 
                 <div class="feature-card">
+
                     <span class="feature-icon">🏆</span>
+
                     <h3>Premium Vehicles</h3>
-                    <p>All vehicles are regularly maintained to the highest standards of comfort and safety.</p>
+
+                    <p>
+                        All vehicles are regularly maintained
+                        for comfort and safety.
+                    </p>
+
                 </div>
 
                 <div class="feature-card">
+
                     <span class="feature-icon">🛡️</span>
+
                     <h3>Fully Insured</h3>
-                    <p>Every rental comes with comprehensive insurance coverage for peace of mind.</p>
+
+                    <p>
+                        Every rental includes comprehensive
+                        insurance coverage.
+                    </p>
+
                 </div>
 
                 <div class="feature-card">
+
                     <span class="feature-icon">📞</span>
+
                     <h3>24/7 Support</h3>
-                    <p>Our dedicated team is available round the clock to assist you anytime.</p>
+
+                    <p>
+                        Our support team is available
+                        anytime you need assistance.
+                    </p>
+
                 </div>
 
                 <div class="feature-card">
+
                     <span class="feature-icon">✈️</span>
+
                     <h3>Airport Pickup</h3>
-                    <p>Convenient airport pickup and drop-off services available across Pakistan.</p>
+
+                    <p>
+                        Convenient airport pickup and drop-off
+                        services across Pakistan.
+                    </p>
+
                 </div>
 
                 <div class="feature-card">
+
                     <span class="feature-icon">💳</span>
+
                     <h3>Flexible Payment</h3>
-                    <p>Multiple payment options including cash, card, and bank transfer.</p>
+
+                    <p>
+                        Multiple payment options including
+                        cash, card, and transfer.
+                    </p>
+
                 </div>
 
             </div>
@@ -255,29 +415,68 @@
         <section>
 
             <div class="section-title">
+
                 <h2>Customer Reviews</h2>
-                <p>What our clients say about DriveNow</p>
+
+                <p>
+                    What our clients say about DriveNow
+                </p>
+
                 <div class="title-line"></div>
+
             </div>
 
             <div class="testimonials-grid">
 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p>"Excellent service! The car was in perfect condition and delivery was on time. Highly recommended for business travel."</p>
-                    <div class="testimonial-author">— Ahmed Raza, Islamabad</div>
+
+                    <div class="testimonial-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Excellent service! The car was in perfect condition
+                        and delivery was on time."
+                    </p>
+
+                    <div class="testimonial-author">
+                        — Ahmed Raza, Islamabad
+                    </div>
+
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p>"Rented the G-Wagon for our family trip to northern Pakistan. Absolutely loved the experience. Will book again!"</p>
-                    <div class="testimonial-author">— Sara Khan, Lahore</div>
+
+                    <div class="testimonial-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Rented the G-Wagon for our family trip.
+                        Absolutely loved the experience."
+                    </p>
+
+                    <div class="testimonial-author">
+                        — Sara Khan, Lahore
+                    </div>
+
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★☆</div>
-                    <p>"Very professional team and well-maintained fleet. The booking process was smooth and customer support was great."</p>
-                    <div class="testimonial-author">— Bilal Mahmood, Karachi</div>
+
+                    <div class="testimonial-stars">
+                        ★★★★☆
+                    </div>
+
+                    <p>
+                        "Professional team and well-maintained fleet.
+                        Booking process was very smooth."
+                    </p>
+
+                    <div class="testimonial-author">
+                        — Bilal Mahmood, Karachi
+                    </div>
+
                 </div>
 
             </div>
@@ -286,7 +485,7 @@
 
     </main>
 
-    <!-- ==============================
+   <!-- ==============================
          FOOTER
     ============================== -->
     <footer class="footer">
@@ -329,17 +528,6 @@
 
     <!-- EXTERNAL JS -->
     <script src="jsFile/script.js"></script>
-
-    <!-- Hero image override for root page -->
-    <script>
-        heroImages = [
-            "Sources/img1.jpg",
-            "Sources/img2.jpg",
-            "Sources/img3.jpg",
-            "Sources/img4.jpg",
-            "Sources/img5.jpg"
-        ];
-    </script>
 
 </body>
 
